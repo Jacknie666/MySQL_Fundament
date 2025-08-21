@@ -11,3 +11,20 @@
   采用混合模式或俩者结合使用
 
 
+命令行界面（CLI）或后台服务应用程序
+图形用户界面（GUI）应用程序
+
+结构化查询语句 SQL命令 Structure Query Language 可以操控所有的关系型语言
+
+SQL —— command -- MySQl.Oracle ,SQLite 
+
+结构化查询语句（SQL）概述
+  主要由数据定义、数据操作、数据查询、数据控制、事物控制等SQL语言的使用规定组成
+
+    1.创建和修改盛放数据的容器（数据定义DDL）
+    2.表中数据增删改查（数据操作DML）
+    3.表中数据多条查找（数据查询DQL）
+
+学习路线 ： DDL —— DML—— DQL ——TCL —— DCL
+
+打开cmd、连接mysql、其他基础mysql指令
