@@ -1,1 +1,8 @@
+数据类型总结
+整数类型： int, tinyint, smallint, bigint
+非整数类型：float， double， decimal
+字符串类型：varchar，char，text
+日期和时间类型：date，time，datetime，timestamp，year
 
+确定数据类型：选择合适范围和适用类型较小的
+不确定数据类型：选择较大值范围，防止超出范围
