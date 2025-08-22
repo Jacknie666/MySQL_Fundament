@@ -16,3 +16,76 @@ create tabel 表名（
   列名 类型 [列可选约束]
   列名 类型 [列可选约束]
 ）[表的约束限制][coment表的可选注释]
+
+表的数据类型
+
+mysql 支持多种数据类型，包括整数、浮点数、定点数、字符串、日期时间等
+整数
+类型     存储     最小值有符号     最小值无符号     最大值有符号     最大值无符号
+tinyint  1       -128            0             127            255
+smallint 2
+mediumint 3
+int     4
+bigint   8
+有符号： 列名 整数类型 有符号，正负值
+无符号； 列名 整数类型 unsigned 无符号 ，没有负
+
+浮点数
+float 和 double 类型表示近似的数值数据。MySql使用4个字节表示单精度，使用8个字节表示双精度
+
+float 4 最大位数 24 小数位数最大8
+double 8 最大位数53 小数位数最大30
+
+student_height float(4,1) unsigned
+
+tip:unsign 不会负值正移
+
+定点数
+decimal类型存储精确的数值数据值。当需要保持精确时，如货币数据。
+decimal 动态计算 m最大值为65 d最大值为30
+注意：decimal 类型的存储空间是可变的， 它的存储大小受decimal数据类型定义时指定的精度和规模影响。如果d的小数位数为0，decimal则不包括小数部分
+
+字符串
+char 和  varchar 都可以存储较短的字符串
+char(m) 固定长度 m 0 <= 255  四个字节
+varchar(m) 可变长度 
+注意： char（m)类型一般需要预先定义字符串长度 。 如何不指定默认为（1）
+       保存数据的实际长度比char类型声明的长度小，则会在右侧填充空格达到长度
+        当mysql搜索char类型的数据时，char会自动去掉尾部的空格
+        varchar，必须指定长度m，否则报错
+        mysql4.0版本以下：var(20):指的是20个字节，如果存放utf-8汉字时，只能存放三个（每个汉字三个字节）
+        mysql5.0版本以上时，varchar（20）指的是20个字符
+                检索时会保留空格
+
+
+开发经验：
+    短文本，固定长度使用char
+    短文本，非固定长度使用varchar 
+    大文本，建议储存到文本文件，使用varchar记录文件地址，不使用text
+
+时间类型
+用于时态值的日期和时间数据为data，year，deadtime，timestamp和year。 每一类数据类型都有有效的范围
+year 1、time 3 、date 3、datetime、timestamp 
+注意：year类型默认00-99值为对应年限，[00-69]默认为2000-2069、[70-99]默认为1970-1999 
+
+扩展：datetime和timestamp类型自动初始化和更新
+    方式1:插入默认时间和修改自动更新当前时间
+    ts timestamp default current_timestamp
+    dt timestamp default current_timestamp
+
+summary:
+    时间类型共5种，
+
+
+
+
+
+
+
+
+
+
+
+
+
+
