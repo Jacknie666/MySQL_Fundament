@@ -1,0 +1,12 @@
+DML语句的作用：插入 更新 删除
+insery 插入 update 修改数据库 delete 删除关键字
+数据操纵语言概述
+数据操作最基本的单元'行'
+
+插入数据语法
+方法1；为表的一行所有字段插入数据
+  insert into 表名 values(value1,value2...)
+方式2:为表的一行指定字段（列）插入数据
+  insert into 表名（列名1，列明2....） values(value1,value2...)
+方式3:同时插入多条数据
+  insert into 表名 values
